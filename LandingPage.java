@@ -28,5 +28,14 @@ public class LandingPage {
 	@FindBy(id = "login")
 	WebElement log;
 	
+	public void login(String name, String password) {
+		user.sendKeys(name);
+		pass.sendKeys(password);
+		log.click();
+	}
+	
+	public void link() {
+		driver.get("https://rahulshettyacademy.com/client");
+	}
 
 }
